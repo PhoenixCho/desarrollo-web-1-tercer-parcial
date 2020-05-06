@@ -1,0 +1,29 @@
+{
+  "name": "segundo-parcial",
+  "version": "1.0.0",
+  "description": "Proyecto de segundo parcial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udo-guasave/uadeo-fj2020-desarrollo-web-i-segundo-parcial.git"
+  },
+  "keywords": [
+    "php",
+    "mvc",
+    "node"
+  ],
+  "author": "Bidkar Aragón Cárdenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udo-guasave/uadeo-fj2020-desarrollo-web-i-segundo-parcial/issues"
+  },
+  "homepage": "https://github.com/udo-guasave/uadeo-fj2020-desarrollo-web-i-segundo-parcial#readme",
+  "dependencies": {
+    "@prettier/plugin-php": "^0.14.0",
+    "bulma": "^0.8.2",
+    "prettier": "^2.0.4"
+  }
+}

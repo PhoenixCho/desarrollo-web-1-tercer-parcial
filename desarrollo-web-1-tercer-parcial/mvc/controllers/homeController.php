@@ -3,7 +3,7 @@ namespace Controllers;
 use App\Libs\View;
 
 class HomeController {
-    public static function index() {
+    public function index() {
         View::make("home", ["title" => "Vista Home"]);
     }
 }

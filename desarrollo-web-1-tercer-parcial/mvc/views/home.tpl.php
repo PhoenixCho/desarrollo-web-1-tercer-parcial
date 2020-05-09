@@ -1,5 +1,4 @@
-<?php
-include 'layout/header.tpl.php'; ?>
+<?php incLayout("header", compact("title")); ?>
 
 <div>
     <p>
@@ -7,4 +6,4 @@ include 'layout/header.tpl.php'; ?>
     </p>
 </div>
 
-<?php include 'layout/footer.tpl.php'; ?>
+<?php incLayout("footer"); ?>

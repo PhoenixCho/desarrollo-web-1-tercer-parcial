@@ -24,11 +24,11 @@ class Request {
         // var_dump($this->controller_name); // home
         // var_dump($this->controller_action); // index
         // exit();
-        $call = "Controllers\\";
-        $call .= ucfirst($this->controller_name)."Controller::";
-        $call .= $this->controller_action;
-        // $call = "Controllers\HomeController::index";
-        call_user_func($call);
+        $classname =
+              "Controllers\\" . ucfirst($this->controller_name) . "Controller";
+        // $classname = "Controllers\HomeController";
+        $controller = new $classname;
+        call_user_func_array([$classname, $this->controller_action], [1]);
     }
 
     protected function getControllerNameAndAction() {

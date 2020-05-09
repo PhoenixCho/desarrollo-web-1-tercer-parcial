@@ -1,18 +1,26 @@
 <?php
 namespace Controllers;
 use App\Libs\View;
+use Models\User;
 
 require MODELS_DIR."users.php";
 
 class UserController {
     // http://mvcfriends.com/controller/action
-    public static function index() {
-        $users = getAllUsers();
+    public function index() {
+        $model = new User();
+        $users = $model->getAllUsers();
         View::make("user.index", ["title" => "Vista Users", "users" => $users]);
     }
 
-    public static function login() {
+    public function login() {
         View::make("user.login", ["title"=>"Inicio de sesión"]);
+    }
+
+    public function edit(int $user_id) {
+        $model = new User();
+        $user = $model->getById($user_id);
+        View::make("user.edit", ["title"=>"Editar perfil", "user"=>$user]);
     }
 
     public static function all() {}

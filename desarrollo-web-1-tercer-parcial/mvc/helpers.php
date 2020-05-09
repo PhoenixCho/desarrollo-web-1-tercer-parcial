@@ -35,3 +35,7 @@ function incLayout(string $layout, array $vars = null) {
     require_once VIEWS_DIR . "layout/" . $layout . ".tpl.php";
     // views/layout/header.tpl.php
 }
+
+function url(string $url) {
+    return "http://".$_SERVER["HTTP_HOST"] . "/" . $url;
+}

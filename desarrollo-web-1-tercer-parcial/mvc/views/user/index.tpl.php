@@ -16,21 +16,21 @@
     <table border="1" cellspacing="0" cellpadding="5">
         <thead>
             <tr>
-                <th>ID</th>
                 <th>FIRSTNAME</th>
                 <th>LASTNAME</th>
                 <th>NAME</th>
                 <th>EMAIL</th>
+                <th>ACCIONES</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($users as $user) { ?>
                 <tr>
-                    <td><?= $user['id'] ?></td>
                     <td><?= $user['firstname'] ?></td>
                     <td><?= $user['lastname'] ?></td>
                     <td><?= $user['name'] ?></td>
                     <td><?= $user['email'] ?></td>
+                    <td><a href="<?= url("user/edit/" .$user["id"]) ?>">✍</a></td>
                 </tr>
             <?php } ?>
         </tbody>

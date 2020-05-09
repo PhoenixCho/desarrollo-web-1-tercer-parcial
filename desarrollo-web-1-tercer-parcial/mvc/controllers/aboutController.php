@@ -3,7 +3,7 @@ namespace Controllers;
 use App\Libs\View;
 
 class AboutController {
-    public static function index() {
+    public function index() {
         View::make("about", ["title" => "Vista About"]);
     }
 

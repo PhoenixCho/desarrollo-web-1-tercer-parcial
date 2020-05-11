@@ -17,7 +17,8 @@ class UserController {
         View::make("user.login", ["title"=>"Inicio de sesión"]);
     }
 
-    public function edit(int $user_id) {
+    public function edit(array $params) {
+        extract($params);
         $model = new User();
         $user = $model->getById($user_id);
         View::make("user.edit", ["title"=>"Editar perfil", "user"=>$user]);

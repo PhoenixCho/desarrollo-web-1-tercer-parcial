@@ -1,9 +1,6 @@
-# Universidad Autónoma de Occidente
+# Universidad Autonoma de Occidente
 ## Unidad Regional Guasave
-### Lic. en Sistemas Computacionales
-
 ### Desarrollo Web I
 
-Profresor: Bidkar Aragón Cárdenas
-
-Alumno: Genaro Duran Acosta Matricula: 18030432
+**Profesor: Bidkar Aragon Cardenas** <br>
+**Alumno: Genaro Duran Acosta Matricula: 18030432**

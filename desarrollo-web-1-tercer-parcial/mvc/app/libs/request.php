@@ -31,10 +31,19 @@ class Request {
         $classname =
               "Controllers\\" . ucfirst($this->controller_name) . "Controller";
         // $classname = "Controllers\HomeController";
+
+        $route = $this->controller_name."/".$this->controller_action;
+        $controller_param = Router::exists($route);
+        if ($controller_param !== false) {
+            if ($controller_param !== "") {
+                $param = [$controller_param => array_shift($seg)];
+            } else {
+                $param = null;
+            }
+        }
+
         $controller = new $classname;
-        var_dump($seg);
-        exit();
-        call_user_func_array([$classname, $this->controller_action], [1]);
+        call_user_func_array([$classname, $this->controller_action], compact("param"));
     }
 
     protected function getControllerNameAndAction(&$seg) {

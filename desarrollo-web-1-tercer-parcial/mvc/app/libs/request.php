@@ -35,10 +35,14 @@ class Request {
         $route = $this->controller_name."/".$this->controller_action;
         $controller_param = Router::exists($route);
         if ($controller_param !== false) {
-            if ($controller_param !== "") {
-                $param = [$controller_param => array_shift($seg)];
-            } else {
-                $param = null;
+            if (is_string($controller_param)) {
+                if ($controller_param !== "") {
+                    $param = [$controller_param => array_shift($seg)];
+                } else {
+                    $param = null;
+                }
+            } elseif (is_array($controller_param)) {
+                $param = $controller_param;
             }
         }
 

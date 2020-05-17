@@ -13,3 +13,4 @@ Router::get("user/edit/user_id");
 Router::get("user/login");
 Router::get("user/logout");
 Router::get("user/profile/user_id");
+Router::post("user/save");

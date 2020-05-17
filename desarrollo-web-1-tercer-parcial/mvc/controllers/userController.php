@@ -19,13 +19,15 @@ class UserController {
 
     public function edit(array $params) {
         extract($params);
-        $model = new User();
-        $user = $model->getById($user_id);
+        $usuario = User::getById($user_id); 
         View::make("user.edit", ["title"=>"Editar perfil", "user"=>$user]);
     }
-
+    
+    public static function save(array $params) {
+        extract($params);
+        User::save($id, $firstname, $lastname);
+    }
     public static function all() {}
-    public static function save() {}
     public static function create() {}
     public static function delete() {}
 }
